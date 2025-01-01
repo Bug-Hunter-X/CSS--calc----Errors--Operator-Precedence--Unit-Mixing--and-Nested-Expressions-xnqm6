@@ -1,0 +1,29 @@
+/* Solution: Correcting calc() issues */
+
+/* Correct unit mixing by explicitly multiplying */
+.example1 {
+  width: calc(100% - 20px);
+}
+
+/* Correct operator precedence using parentheses */
+.example2 {
+  height: calc((100px + 20px) / 2);
+}
+
+/* Use parentheses for complex nested calculations */
+.example3 {
+  margin: calc(50% - (20px + 10px));
+}
+
+/* Handle potential browser compatibility issues with fallbacks */
+.example4 {
+  width: calc(100% - 20px);
+  width: 90%; /* Fallback for older browsers */
+}
+
+/* Avoid excessively complex nested expressions for better readability */
+.example5 {
+  width: calc(100% - 20px); 
+  padding: 10px; 
+  /* Instead of complex nesting, separate calculations */
+}
